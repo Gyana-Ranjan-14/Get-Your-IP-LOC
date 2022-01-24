@@ -1,0 +1,2 @@
+# Get-Your-IP-LOC-
+Hi , Friend This is a part of my web development project , This Project all about To Know your current Location and Your Ip adress your network,country area and etc. This project is made up of using HTML,CSS and Javascript. There are Two API are used to develope this project { 1- axios api to fetch the data               2-https://ipapi.co/json/  (By the help of this api we will get the required information )  
