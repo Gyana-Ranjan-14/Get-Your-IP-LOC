@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+:root {
+    --body-color: #efefef;
+    --bg-color: #fff;
+}
+
+.dark-theme {
+    --body-color: #0a0a0a;
+    --bg-color: #000;
+}
+
+
+/* Dark mode and white mode */
+
+#dark-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgb(66, 63, 63);
+    width: 45px;
+    border-radius: 15px;
+    padding: 2px 3px;
+    cursor: pointer;
+    display: flex;
+    transition: padding-left 2s background 2s;
+}
+
+#dark-btn span {
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+/* this is a css class */
+
+#dark-btn.dark-btn-on {
+    padding-left: 23px;
+    background: rgba(187, 204, 201, 0.87);
+}
+
+.back-body {
+    margin-left: 230px;
+    margin-right: 230px;
+    background: var(--body-color);
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-weight: 600;
+    text-decoration: underline;
+    padding-top: 45px;
+    color: rgba(2, 192, 176, 0.651);
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 110px 5%;
+}
+
+
+/* button css */
+
+.btn1 {
+    float: right;
+}
+
+.btn1 button,
+.btn2 button {
+    position: relative;
+    display: block;
+    margin: 0 20px;
+    border: none;
+    color: white;
+    background: #222;
+    padding: 17px 60px;
+    font-size: 22px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    border-radius: 9px;
+}
+
+button:hover {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .2);
+}
+
+.btn1 button:after,
+.btn2 button:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    transition: all .5s ease-in-out;
+}
+
+.btn1 button:after {
+    background: #78c7d2;
+    transform: translate(-98%, -25%) rotate(45deg);
+}
+
+.btn2 button:after {
+    background: #78c7d2;
+    transform: translate(-98%, -25%) rotate(45deg);
+}
+
+.btn1:hover button:after {
+    transform: translate(-9%, -25%) rotate(45deg);
+}
+
+.btn2:hover button:after {
+    transform: translate(-9%, -25%) rotate(45deg);
+}
+
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* result css of ip adress */
+
+.ipinformation .showIp {
+    margin-top: 50px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.ipinformation h3 {
+    margin-top: 20px;
+}
+
+.locinformations .showcountry {
+    margin-top: 113px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #276fdbbb;
+}
+
+
+/* footer css */
+
+.footer {
+    text-align: center;
+    color: #9a9a9a;
+    padding: 10px 0 20px;
+    font-size: 13px;
+}
+
+@media (max-width: 1130px) {
+    .back-body {
+        margin-left: 130px;
+        margin-right: 130px;
+        background: var(--body-color);
+        height: 100vh;
+    }
+    .btn1 button:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        height: 435%;
+        width: 140%;
+        transition: all .5s ease-in-out;
+    }
+}
+
+@media (max-width: 785px) {
+    h1 {
+        font-size: 22px;
+    }
+    .btn2 button {
+        margin-top: -62px;
+    }
+    .back-body {
+        margin-left: 10px;
+        margin-right: 10px;
+        background: var(--body-color);
+        height: 100%;
+    }
+    .btn1 {
+        float: left;
+        margin-top: 52px;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .locinformations .showcountry {
+        margin-top: 153px;
+        font-weight: 700;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
